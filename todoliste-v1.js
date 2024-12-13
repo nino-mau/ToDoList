@@ -129,14 +129,10 @@ const todosObj = {
     },
     toggleAll: function(){
         if (this.myTodos.every((td) => td.completed)) { // Pas de "== true" car la condition if est remplie par défault si true est renvoyé
-            for (let i = 0; i < this.myTodos.length; i++) {
-                this.myTodos[i].completed = false;
-            }
+            this._toggleAllLoop(true)
         }
         else {
-            for (let i = 0; i < this.myTodos.length; i++) {
-                this.myTodos[i].completed = true;
-            }
+            this._toggleAllLoop(false)
         }
         view.displayTodos();
     },
@@ -144,6 +140,11 @@ const todosObj = {
         this.myTodos = newTodosArr;
         console.log(this.myTodos);
     },
+    _toggleAllLoop: function(bool){
+        for (let i = 0; i < this.myTodos.length; i++) {
+            this.myTodos[i].completed = bool;
+        }
+    }
 };
     
 console.log('********** Todo ***********');
