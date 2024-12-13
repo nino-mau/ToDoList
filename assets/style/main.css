@@ -1,0 +1,141 @@
+* {
+    --checkbox-border-color: #74992e;
+    --checkbox-checked-color: #74992e;
+    --checkbox-hover-color: #e0fcacf6;
+    --checkbox-disabled-bg-color: #d9d9d9;
+    accent-color: #74992e;
+}
+/** ---- Checkbox ---- */
+input[type="checkbox"] {
+    position: inline-block;
+    vertical-align: text-top;
+    box-sizing: border-box;
+    width: 27px;
+    height: 27px;
+    margin: 6px;
+    padding: 0;
+    border: 2px solid var(--checkbox-border-color);
+    appearance: none;
+    background-color: transparent;
+    outline: none;
+    transition: outline 0.1s;
+}
+input[type="checkbox"]:checked {
+    background-size: cover;
+    padding: 2px;
+}
+input[type="checkbox"]:not(:disabled):checked {
+    border-color: var(--checkbox-checked-color);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32" xml:space="preserve"><path style="fill:rgb(116, 153, 46)" d="M11.941,28.877l-11.941-11.942l5.695-5.696l6.246,6.246l14.364-14.364L32,8.818"/></svg>');
+}
+@media (hover: hover) {
+    input[type="checkbox"]:not(:disabled):hover {
+      background-color: var(--checkbox-hover-color);
+      outline: 1px solid var(--checkbox-hover-color);
+    }
+}
+input[type="checkbox"]:focus-visible {
+    outline: 6px solid var(--checkbox-hover-color);
+    transform: scale(1.05);
+}
+/** ---- Button ---- */ 
+.deleteButton {
+    background-color: red;
+    border: none;
+    color: black;
+    text-align: center;
+
+}
+.deleteButton:hover {
+    background-color: RoyalBlue;
+
+} 
+body {
+    font-family: 'Inter';
+}
+main {
+    width:100vw;
+    height:100vh;
+    display: grid;
+    grid-template-columns: [columns-first] 15% [line1] auto [line2] 15% [columns-end];
+    grid-template-rows: [row-start] 10% [row1] auto [row2] 15% [row-end];
+}
+p {
+    position: inline-block;
+    vertical-align:middle;
+}
+header {
+    display: grid;
+    grid-column-start: columns-first;
+    grid-column-end: span 3;
+    grid-row-start: row-start;
+    grid-row-end: span 1;
+    text-align: center;
+    align-items: center;
+    margin: 3px;
+}
+footer {
+    display: grid;
+    grid-column-start: columns-first;
+    grid-column-end: span 3;
+    grid-row-start: row2;
+    grid-row-end: span 1;
+    text-align: center;
+    align-items: center;
+    margin: 3px;
+}
+#center_div {
+    display: grid;
+    grid-column-start: line1;
+    grid-column-end: span 1;
+    grid-row-start: row1;
+    grid-row-end: span 1;
+    text-align: center;
+    align-items: center;
+    margin: 3px;
+}
+#left_div {
+    display: grid;
+
+    grid-column-start: columns-first;
+    grid-column-end: span 1;
+    grid-row-start: row1;
+    grid-row-end: span 1;
+    text-align: center;
+    align-items: center;
+    margin: 3px;
+}
+#right_div {
+    display: grid;
+    grid-column-start: line2;
+    grid-column-end: span 1;
+    grid-row-start: row1;
+    grid-row-end: span 1;
+    text-align: center;
+    align-items: center;
+    margin: 3px;
+}
+li {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    list-style-type: none;
+    font-size: 30px;
+    margin-bottom:15px;
+}
+img {
+    display: inline-block;  
+}
+ul {
+    position: relative;
+    padding-left: 0;
+}
+.doneCheckbox {
+    position: relative;
+    text-align: center;
+}
+
+
+
+
+
